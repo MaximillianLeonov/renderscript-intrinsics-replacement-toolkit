@@ -1,3 +1,45 @@
+# Usage
+- `settings.gradle` / `settings.gradle.kts`
+
+**Groovy:**
+```gradle
+dependencyResolutionManagement {
+    // ...
+    repositories {
+        google()
+        mavenCentral()
+        // ...
+
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+**Kotlin DSL:**
+```kotlin
+dependencyResolutionManagement {
+    // ...
+    repositories {
+        google()
+        mavenCentral()
+        // ...
+
+        maven(url = "https://jitpack.io")
+    }
+}
+```
+- `build.gradle` / `build.gradle.kts`
+
+**Groovy:**
+```gradle
+implementation "com.github.maximillianleonov:renderscript-intrinsics-replacement-toolkit:0.8-beta"
+```
+
+**Kotlin DSL:**
+```kotlin
+implementation("com.github.maximillianleonov:renderscript-intrinsics-replacement-toolkit:0.8-beta")
+```
+
 # RenderScript Intrinsics Replacement Toolkit - v0.8 BETA
 
 This Toolkit provides a collection of high-performance image manipulation functions
